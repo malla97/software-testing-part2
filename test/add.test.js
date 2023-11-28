@@ -12,6 +12,5 @@ describe('add.js', () => {
     expect(result).to.equal(4);
   });
 
-  // More tests ...
   
 });

@@ -72,5 +72,5 @@ describe('memoize.js', () => {
     expect(memoizedMultiplyBy.call(obj, 2)).to.equal(20);
   });
 
-  // Add more test cases as needed
+  
 });

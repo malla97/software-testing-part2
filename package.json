@@ -5,11 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --recursive test"
+    "test": "mocha --recursive test",
+    "coverage": "c8  --exclude \"src/.internal/*.js\" --exclude \"test/*.js\" mocha"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "c8": "^8.0.1",
     "chai": "^4.3.10",
     "mocha": "^10.2.0"
   }

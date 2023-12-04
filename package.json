@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha --recursive test",
-    "coverage": "c8  --exclude \"src/.internal/*.js\" --exclude \"test/*.js\" mocha"
+    "coverage": "c8 --exclude \"src/.internal/*.js\" --exclude \"test/*.js\" mocha && npx coveralls"
   },
   "author": "",
   "license": "MIT",

@@ -7,7 +7,7 @@ describe('add.js', () => {
     expect(result).to.equal(10);
   });
 
-  it('should handle negative numbers', () => {
+  it('should handle negative numbers correctly', () => {
     const result = add(-3, 7);
     expect(result).to.equal(4);
   });

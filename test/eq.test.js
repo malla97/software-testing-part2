@@ -18,7 +18,9 @@ describe('eq.js', () => {
   });
 
   it('should check if objects are equal', () => {
-    const result = eq({'c':0}, {'c':0});
+    const object = {'c': 0};
+    const other = {'c': 0};
+    const result = eq(object, other);
     expect(result).to.equal(true);
   });
 
@@ -26,6 +28,11 @@ describe('eq.js', () => {
     const result = eq(NaN, NaN);
     expect(result).to.equal(true);
   });
+
+  it('should check if NaN and null are equal', () => {
+      const result = eq(NaN, null);
+      expect(result).to.equal(false);
+    });
 
 
 });

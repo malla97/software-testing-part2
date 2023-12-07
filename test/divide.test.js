@@ -17,4 +17,9 @@ describe('divide.js', () => {
     expect(result).to.equal(-1.5);
   });
 
+  it('should work when dividend and divisor are the same', () => {
+    const result = divide(10, 10);
+    expect(result).to.equal(1);
+  });
+
 });

@@ -3,24 +3,24 @@ import compact from '../src/compact.js';
 
 describe('compact.js', () => {
   it('should remove invalid values', () => {
-    var array = [false, false];
+    const array = [false, null, 0, "", undefined, NaN];
     const result = compact(array);
 
-    expect(result).to.equal([]);
+    expect(result.length).to.equal(0);
   });
 
   it('should not remove valid values', () => {
-    var array = [1, 2, 3];
+    const array = [1, 2, 3];
     const result = compact(array);
 
-    expect(result).to.equal([1, 2, 3]);
+    expect(result).to.have.members(array);
   });
 
   it('should work with a mix of valid and invalid values', () => {
-    var array = ["one", null, "two", "three"];
+    const array = ["one", null, "two", "three"];
     const result = compact(array);
 
-    expect(result).to.equal(["one", "two", "three"]);
+    expect(result).to.have.members(["one", "two", "three"]);
   });
 
 });

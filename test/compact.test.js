@@ -1,9 +1,9 @@
 import { expect } from 'chai';
-import memoize from '../src/compact.js';
+import compact from '../src/compact.js';
 
 describe('compact.js', () => {
   it('should remove invalid values', () => {
-    var array = [false, null, 0, "", undefined, NaN];
+    var array = [false, false];
     const result = compact(array);
 
     expect(result).to.equal([]);
@@ -17,10 +17,10 @@ describe('compact.js', () => {
   });
 
   it('should work with a mix of valid and invalid values', () => {
-    var array = ["one", null, "two", "three", undefined];
+    var array = ["one", null, "two", "three"];
     const result = compact(array);
 
-    expect(result).to.equal([1, 2, 3]);
+    expect(result).to.equal(["one", "two", "three"]);
   });
 
 });

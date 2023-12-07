@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import memoize from '../src/get.js';
+import get from '../src/get.js';
 
 describe('get.js', () => {
   it('should get value of object at path string', () => {

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import add from '../src/divide.js';
+import divide from '../src/divide.js';
 
 describe('divide.js', () => {
   it('should divide two numbers', () => {

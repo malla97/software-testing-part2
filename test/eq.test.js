@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import add from '../src/eq.js';
+import eq from '../src/eq.js';
 
 describe('eq.js', () => {
   it('should check if integers are equal', () => {

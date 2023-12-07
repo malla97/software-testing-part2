@@ -23,4 +23,11 @@ describe('compact.js', () => {
     expect(result).to.have.members(["one", "two", "three"]);
   });
 
+  it('should handle array being null', () => {
+    const array = null;
+    //const result = compact(array);
+
+    expect(compact(array)).to.throw(TypeError);
+  });
+
 });

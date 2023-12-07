@@ -23,4 +23,11 @@ describe('get.js', () => {
         expect(result).to.equal(0);
   });
 
+  it('should handle object being null', () => {
+    const object = null;
+    const result = get(object, '', 0);
+
+    expect(result).to.equal(0);
+  });
+
 });

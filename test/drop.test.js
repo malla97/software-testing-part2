@@ -9,7 +9,7 @@ describe('drop.js', () => {
     expect(result).to.have.members([2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
-  it('should drop n values from beginning of an array', () => {
+  it('should drop n=3 values from beginning of an array', () => {
     const array = [1, 2, 3, 4, 5, 6];
     const result = drop(array, 3);
 
@@ -28,6 +28,13 @@ describe('drop.js', () => {
     const result = drop(array, 0);
 
     expect(result).to.have.members([1, 2, 3, 4, 5, 6]);
+  });
+
+  it('should handle array being null', () => {
+    const array = null;
+    const result = drop(array);
+
+    expect(result).to.have.members([]);
   });
 
 });

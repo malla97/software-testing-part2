@@ -8,7 +8,7 @@ describe('compact.js', () => {
 
     expect(result.length).to.equal(0);
   });
-/*
+
   it('should not remove valid values', () => {
     const array = [1, 2, 3];
     const result = compact(array);
@@ -28,6 +28,6 @@ describe('compact.js', () => {
     //const result = compact(array);
 
     expect(compact(array)).to.throw(TypeError);
-  });*/
+  });
 
 });

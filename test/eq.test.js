@@ -16,13 +16,13 @@ describe('eq.js', () => {
     const result = eq('o', 'O');
     expect(result).to.equal(false);
   });
-/*
+
   it('should check if objects are equal', () => {
     const object = {'c': 0};
     const other = {'c': 0};
     const result = eq(object, other);
     expect(result).to.equal(true);
-  });*/
+  });
 
   it('should check if NaN are equal', () => {
     const result = eq(NaN, NaN);
